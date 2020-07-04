@@ -12,5 +12,6 @@ go get github.com/kazuki1126/gituser
 
 # Usage
 
-
+```
 Type "gituser [username]" on your terminal.
+```
