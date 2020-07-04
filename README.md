@@ -1,4 +1,4 @@
-# git-clone-all-repos-user
+# gituser
 
 
 This CLI allows you to git clone all the public repos of a certain github user.
