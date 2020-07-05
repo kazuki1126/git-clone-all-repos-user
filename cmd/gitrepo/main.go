@@ -2,9 +2,10 @@ package main
 
 import (
 	"fmt"
-	git "go-excercises/gitclone-cli/pkg/git"
 	"log"
 	"os"
+
+	git "github.com/kazuki1126/gitclone-cli/pkg/git"
 )
 
 func main() {
