@@ -61,7 +61,7 @@ func CreateRepoInLocal(url, repoName string) error {
 				fmt.Println(err)
 				continue
 			}
-			if err := createRepoInLocal(repoContent.URL, repoName); err != nil {
+			if err := CreateRepoInLocal(repoContent.URL, repoName); err != nil {
 				return err
 			}
 		case file:

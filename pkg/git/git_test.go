@@ -46,7 +46,7 @@ func TestCreateRepoInLocal(t *testing.T) {
 	os.Mkdir("black-jack-game", dirPerm)
 	for _, tc := range tt {
 		t.Run(tc.name, func(t *testing.T) {
-			err := createRepoInLocal(tc.args.url, tc.args.repoName)
+			err := CreateRepoInLocal(tc.args.url, tc.args.repoName)
 			if err != nil && err != tc.expectedErr {
 				t.Errorf("Expected error: %v, Got: %v", tc.expectedErr, err)
 			} else if (err != nil) != tc.wantErr {
@@ -139,7 +139,7 @@ func TestGetAllRepos(t *testing.T) {
 
 	for _, tc := range tt {
 		t.Run(tc.name, func(t *testing.T) {
-			if _, err := getAllRepos(tc.args.userName); (err != nil) != tc.wantErr {
+			if _, err := GetAllRepos(tc.args.userName); (err != nil) != tc.wantErr {
 				t.Errorf("Error occurred: %v WantErr: %v", err, tc.wantErr)
 			}
 		})
