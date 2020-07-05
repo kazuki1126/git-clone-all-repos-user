@@ -2,6 +2,7 @@ package main
 
 import (
 	"fmt"
+	git "go-excercises/gitcloneCLI"
 	"log"
 	"os"
 )
@@ -20,15 +21,15 @@ func run(args []string) error {
 		fmt.Println("Invalid number of arguments")
 		showUsage()
 	default:
-		fmt.Println("Start importing...")
+		fmt.Println("Started importing...")
 		userName := args[1]
-		allRepoNames, err := getAllRepos(userName)
+		allRepoNames, err := git.GetAllRepos(userName)
 		if err != nil {
 			return err
 		}
 		for _, repoName := range allRepoNames {
 			url := fmt.Sprintf("https://api.github.com/repos/%s/%s/contents/", userName, repoName)
-			if err := createRepoInLocal(url, repoName); err != nil {
+			if err := git.CreateRepoInLocal(url, repoName); err != nil {
 				return err
 			}
 		}
