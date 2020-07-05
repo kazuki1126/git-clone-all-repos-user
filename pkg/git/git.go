@@ -1,4 +1,4 @@
-package main
+package git
 
 import (
 	"encoding/json"
@@ -28,7 +28,7 @@ var file = "file"
 var errStatusNotOK = errors.New("Status Not 200")
 var unexpectedErr = errors.New("Unexpected error occurred")
 
-func createRepoInLocal(url, repoName string) error {
+func CreateRepoInLocal(url, repoName string) error {
 	if url == "" || repoName == "" {
 		return unexpectedErr
 	}
@@ -105,7 +105,7 @@ func processFile(repoName, filePath, downloadURL string) error {
 	return nil
 }
 
-func getAllRepos(userName string) ([]string, error) {
+func GetAllRepos(userName string) ([]string, error) {
 	if userName == "" {
 		return nil, unexpectedErr
 	}
