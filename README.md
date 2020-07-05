@@ -1,4 +1,4 @@
-# gitrepo
+# gitclone-cli
 
 
 This CLI allows you to git clone all the public repos of a certain github user.
@@ -7,11 +7,11 @@ This CLI allows you to git clone all the public repos of a certain github user.
 # Installation 
 
 ```
-go get github.com/kazuki1126/gitclone-cli
+go get github.com/kazuki1126/gitclone-cli/cmd/gitrepo
 ```
 
 # Usage
 
 ```
-Type gituser [username] on your terminal.
+Type gitrepo [username] on your terminal.
 ```
