@@ -2,7 +2,7 @@ package main
 
 import (
 	"fmt"
-	git "go-excercises/gitcloneCLI"
+	git "go-excercises/gitclone-cli/pkg/git"
 	"log"
 	"os"
 )
