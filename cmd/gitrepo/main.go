@@ -21,7 +21,7 @@ func run(args []string) error {
 		fmt.Println("Invalid number of arguments")
 		showUsage()
 	default:
-		fmt.Println("Start importing...")
+		fmt.Println("Started importing...")
 		userName := args[1]
 		allRepoNames, err := git.GetAllRepos(userName)
 		if err != nil {
