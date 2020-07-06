@@ -65,9 +65,17 @@ func CreateRepoInLocal(url, repoName string) error {
 				return err
 			}
 		case file:
-			if err := processFile(repoName, repoContent.Path, repoContent.DownloadURL.(string)); err != nil {
-				return err
+			if repoContent.DownloadURL == nil {
+				if err := os.Mkdir(repoContent.Path, dirPerm); err != nil {
+					fmt.Println(err)
+					continue
+				}
+			} else {
+				if err := processFile(repoName, repoContent.Path, repoContent.DownloadURL.(string)); err != nil {
+					return err
+				}
 			}
+
 		}
 	}
 	return nil
