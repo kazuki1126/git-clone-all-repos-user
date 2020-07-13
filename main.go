@@ -16,13 +16,13 @@ import (
 
 var (
 	token = flag.String("t", "", "your github token")
-	org   = flag.String("org", "", "organization to git clone repositries from")
+	org   = flag.String("org", "", "organization to git clone repositories from")
 )
 
 func main() {
 	flag.Parse()
 	if *token == "" || *org == "" {
-		fmt.Println("Please specify your github token and organiation to clone repositries from.")
+		fmt.Println("Usage: \n      gitclone-cli -t=[your github token] -org=[organization name]")
 		os.Exit(1)
 	}
 

@@ -1,6 +1,6 @@
 # gitclone-cli
 
-This CLI allows you to git clone all repos of a specified github organization.
+This CLI allows you to git clone all repositories of a specified github organization.
 
 
 # Installation 
