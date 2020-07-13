@@ -19,7 +19,6 @@ var (
 	org   = flag.String("org", "", "organization to git clone repositries from")
 )
 
-// Is there any alternative for authorization other than the token
 func main() {
 	flag.Parse()
 	if *token == "" || *org == "" {
