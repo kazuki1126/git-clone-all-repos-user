@@ -12,5 +12,5 @@ go get github.com/kazuki1126/gitclone-cli
 # Usage
 
 ```
-Type gitclone-cli -t=[your github token] -org=[organization to git clone repos from] on your terminal.
+Type gitclone-cli -t=[your github token] -org=[organization name] on your terminal.
 ```
